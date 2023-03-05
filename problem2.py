@@ -8,16 +8,16 @@ num = input("Enter a binary number:")[::-1]
 usableDigits = ["0", "1"]
 binaryNumber = True
 for digit in num:
-    if digit not in usableDigits:
+    if digit not in usableDigits and binaryNumber:
         print("Error: Not a Binary Number!")
         binaryNumber = False
-        break
+   
 
 #Calculation Step
 
 exponent = 0
 total = 0
-if binaryNumber == True:
+if binaryNumber:
     for digit in num:
         x = int(digit)
         total += x * (base**exponent)
